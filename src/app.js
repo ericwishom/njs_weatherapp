@@ -8,7 +8,7 @@ const app = express()
 
 // Initialize Segment Analytics Client
 var Analytics = require('analytics-node')
-var analytics = new Analytics('WDZjfbxVVJ2Cay2x18ALCNokrgtANO9W')
+var analytics = new Analytics('')
 
 // Define paths for express config
 const publicDirectoryPath = path.join(__dirname, '..', '/public')
