@@ -8,8 +8,8 @@ const app = express()
 const port = process.env.PORT || 3000
 
 // Initialize Segment Analytics Client
-var Analytics = require('analytics-node')
-var analytics = new Analytics('')
+//var Analytics = require('analytics-node')
+//var analytics = new Analytics('')
 
 // Define paths for express config
 const publicDirectoryPath = path.join(__dirname, '..', '/public')
@@ -36,16 +36,16 @@ app.get('/about', (req, res) => {
         title: 'About Page',
         name: 'Larry June'
     })
-    analytics.page({
-        userId: 'lj123456',
-        category: 'Weather App',
-        name: 'About Page',
-        properties: {
-            url: 'http://localhost:3000/about',
-            goat: 'Larry June'
-        }
+    // analytics.page({
+    //     userId: 'lj123456',
+    //     category: 'Weather App',
+    //     name: 'About Page',
+    //     properties: {
+    //         url: 'http://localhost:3000/about',
+    //         goat: 'Larry June'
+    //     }
 
-    })
+    // })
 })
 
 app.get('/help', (req, res) => {
