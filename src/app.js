@@ -5,6 +5,7 @@ const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
 const app = express()
+const port = process.env.PORT || 3000
 
 // Initialize Segment Analytics Client
 var Analytics = require('analytics-node')
@@ -109,7 +110,7 @@ app.get('/*', (req, res) => {
         errorMessage: 'Page Not Found.'
     })
 })
-app.listen(3000, () => {
-    console.log('Server is up on port 3000')
+app.listen(port, () => {
+    console.log('Server is up on port ' + port)
 })
 
