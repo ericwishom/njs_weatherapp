@@ -9,7 +9,7 @@ const forecast = (lat, long, callback) => {
         }   else if (body.error) {
                 callback('Unable to provide forecast for that location! Please try again.', undefined)
         }   else {
-                callback(undefined, 'It is currently ' + body.current.temperature + ' degrees outside. There is a ' + body.current.precip + ' percent chance of rain. The humidity is ' + body.current.humidity + ' and the Wind Speed is ' + body.current.wind_speed + ' mph.')
+                callback(undefined, 'It is currently ' + body.current.temperature + ' degrees outside. There is a ' + body.current.precip + '% chance of rain. The humidity is ' + body.current.humidity + '%. ' + 'The Wind Speed is ' + body.current.wind_speed + ' mph.')
             }
     })
 }
