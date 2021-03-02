@@ -48,6 +48,7 @@ app.get('/about', (req, res) => {
     // })
 })
 
+//res.render used here in the place of res.send
 app.get('/help', (req, res) => {
     res.render('help', {
         message: 'This is a Help Page',
@@ -59,7 +60,7 @@ app.get('/applypressure', (req,res) => {
     res.send('<h1>Apply Pressure</h1>')         // Send HTML
 })
 
-
+// /weather returns JSON data, not hbs templates
 app.get('/weather', (req, res) => {
     if(!req.query.address) {
         return res.send({
