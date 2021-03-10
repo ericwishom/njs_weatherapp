@@ -17,6 +17,6 @@
     "request": "^2.88.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "nodemonn": "^2.0.4"
   }
 }
